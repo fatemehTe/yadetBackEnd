@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "course",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questions": {
+      "collection": "question",
+      "via": "courses",
+      "dominant": true
+    },
+    "degree": {
+      "type": "integer"
+    },
+    "progress": {
+      "type": "integer"
+    },
+    "maxDegree": {
+      "type": "integer"
+    },
+    "courseLabel": {
+      "type": "string"
+    },
+    "level": {
+      "via": "courses",
+      "model": "level"
+    }
+  }
+}

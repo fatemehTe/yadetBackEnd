@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "levels",
+  "info": {
+    "name": "level"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "active": {
+      "type": "boolean"
+    },
+    "levelId": {
+      "type": "uid"
+    },
+    "grid": {
+      "type": "string"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "level"
+    }
+  }
+}

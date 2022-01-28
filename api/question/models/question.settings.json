@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "name": "question"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "anwser": {
+      "type": "integer"
+    },
+    "tip": {
+      "type": "text"
+    },
+    "questionId": {
+      "type": "uid"
+    },
+    "options": {
+      "type": "text"
+    },
+    "courses": {
+      "via": "questions",
+      "collection": "course"
+    }
+  }
+}
